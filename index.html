@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3JWFRKCFQS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3JWFRKCFQS');
+</script>
+  
   <meta charset="utf-8">
 
   <meta
@@ -137,12 +148,12 @@
     </div>
 
     <esp-web-install-button manifest="manifest-ST7789.json">
-      <button slot="activate">
+      <button id="st7789" slot="activate">
         Install RandumbF1 - ST7789 Driver
       </button>
 
     <esp-web-install-button manifest="manifest-ILI9341.json">
-      <button slot="activate">
+      <button id="ili9341" slot="activate">
         Install RandumbF1 - ILI9341 Driver
       </button>
 
@@ -151,6 +162,20 @@
         Use Chrome or Edge on a desktop computer.
       </span>
     </esp-web-install-button>
+
+      <script>
+document.getElementById("st7789").addEventListener("click", function () {
+    gtag('event', 'install_st7789', {
+        driver: 'ST7789'
+    });
+});
+
+document.getElementById("ili9341").addEventListener("click", function () {
+    gtag('event', 'install_ili9341', {
+        driver: 'ILI9341'
+    });
+});
+</script>
 
     <p class="note">
       The initial installation erases the device and installs
