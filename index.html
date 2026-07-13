@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>RandumbF1 Web Installer</title>
+
+  <script
+    type="module"
+    src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module">
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 24px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background:
+        radial-gradient(
+          circle at bottom,
+          rgba(232, 0, 45, 0.28),
+          transparent 42%
+        ),
+        linear-gradient(135deg, #050505, #111111);
+
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 560px;
+      padding: 30px;
+
+      text-align: center;
+
+      background: #0d0d0f;
+      border: 1px solid #ff3657;
+      border-radius: 18px;
+
+      box-shadow:
+        0 0 22px rgba(232, 0, 45, 0.45),
+        0 0 60px rgba(232, 0, 45, 0.22);
+    }
+
+    .logo {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      margin: 0 auto 16px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 26px;
+    }
+
+    .version {
+      margin-bottom: 24px;
+      color: #c8c8c8;
+      font-size: 14px;
+    }
+
+    .instructions {
+      margin: 20px 0;
+      padding: 16px;
+
+      text-align: left;
+      line-height: 1.6;
+
+      background: #220008;
+      border: 1px solid #e8002d;
+      border-radius: 12px;
+    }
+
+    esp-web-install-button {
+      display: block;
+      margin-top: 24px;
+    }
+
+    .note {
+      margin-top: 22px;
+      color: #bdbdbd;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    a {
+      color: #ff3657;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <img
+      class="logo"
+      src="../assets/images/RF1_logo.png"
+      alt="RandumbF1"
+    >
+
+    <h1>RandumbF1 Web Installer</h1>
+
+    <div class="version">
+      v0.1.0 Beta
+    </div>
+
+    <div class="instructions">
+      <strong>Installation:</strong><br>
+      1. Connect the RandumbF1 device by USB.<br>
+      2. Click Install below.<br>
+      3. Select the correct serial port.<br>
+      4. Follow the browser prompts.<br>
+      5. Wait for the device to restart.
+    </div>
+
+    <esp-web-install-button manifest="manifest-ST7789.json">
+      <button slot="activate">
+        Install RandumbF1
+      </button>
+
+      <span slot="unsupported">
+        This browser does not support Web Serial.
+        Use Chrome or Edge on a desktop computer.
+      </span>
+    </esp-web-install-button>
+
+    <p class="note">
+      The initial installation erases the device and installs
+      RandumbF1 using the correct partition layout.
+    </p>
+  </main>
+</body>
+</html>
