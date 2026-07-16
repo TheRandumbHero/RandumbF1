@@ -17,6 +17,8 @@ Standings is both Drivers and Constructor Standings.
 
 Settings gives you a few customisation options including Team Colour based themes and Timezone Control, which will give you the Race times in your Timezone when set.
 
+More info available here: [Initial Release Notes](https://github.com/TheRandumbHero/RandumbF1/blob/main/release-notes.md)
+
 > [!NOTE]
 > Please bear in mind this still in Beta as I get use to GitHub & PlatformIO so I currently only have the one driver version. I will be producing the second one soon! Please bare with me!
 
