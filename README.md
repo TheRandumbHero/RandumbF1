@@ -5,7 +5,7 @@
 
 It's fair to say I love sport, but in recent years I haven't followed F1 as closely as I'd like, I dip in and out and I thought it would be cool to have a desktop companion that gives me a heads up about the next race, details, circuit etc. So I built one!
 
-This is built with OpenF1 as well as loading some assets via github to save space on the device and hopefully reduce the RAM usage. So there can be updates over time that wont all require reflashing.
+This is built with OpenF1 as well as loading some assets via github to save space on the device and hopefully reduce the RAM usage. So there can be updates over time that wont all require reflashing. Due to the web based assets it does mean sometimes it takes a second to load so I apologise for any lag.
 
 # So What can I do with it?
 
@@ -49,6 +49,10 @@ Connect the ESP32 to your PC with a USB-C cable and head to [LINK](https://thera
 
 Once the ESP32 boots up for the first time, it will create a Wifi Access Point called RandumbF1, connect to this on your phone/laptop. Head to 192.168.77.1 on your browser and enter your home WIFI details. You'll get a confirmation page and the device will reboot.
 
+<p align="center">
+  <a href="/assets/images/Initial_Setup_Screen.png">
+    <img src="/assets/images/Initial_Setup_Screen.png" width="180" alt="Initial">
+  </a>
 
 # First Setup
 
@@ -59,8 +63,36 @@ You should now have the home screen, tap 'Settings' and you'll see a local IP ad
 
 Now is the fun stuff. Head back to the Home Screen, Click 'Settings' and Cycle through the Team based themes!
 
+# Screen Examples
+
+<p align="center">
+  <a href="/assets/images/Home_Screen.jpeg">
+    <img src="/assets/images/Home_Screen.jpeg" width="180" alt="Initial">
+  </a>
+  <a href="/assets/images/Next_Race_Screen.jpeg">
+    <img src="/assets/images/Next_Race_Screen.jpeg" width="180" alt="Next Race">
+  </a>
+  <a href="/assets/images/Calendar_Screen.jpeg">
+    <img src="/assets/images/Calendar_Screen.jpeg" width="180" alt="Calendar">
+  </a>
+    <a href="/assets/images/Drivers_Standings.jpeg">
+    <img src="/assets/images/Drivers_Standings.jpeg" width="180" alt="Drivers Standings">
+  </a>
+  <a href="/assets/images/Constructors_Standings.jpeg">
+    <img src="/assets/images/Constructors_Standings.jpeg" width="180" alt="Constructors Standings">
+  </a>
+    <a href="/assets/images/Settings_Screen.jpeg">
+    <img src="/assets/images/Settings_Screen.jpeg" width="180" alt="Settings">
+  </a>
+
+
 <p align="center">
   <a href="https://discord.gg/KhCzPJEbc2">
     <img src="https://makerworld.bblmw.com/makerworld/model/20260708/2960391924/2e40a4f5fd8edcc9.png" width="240" alt="Initial">
   </a>
 
+# Data Sources
+This a completely unofficial unaffiliated F1 Companion for all the details about where the data comes from please visit the original sources:
+
+- [OpenF1](https://openf1.org)
+- [Formula1 Official Site](https://www.formula1.com)
