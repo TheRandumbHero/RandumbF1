@@ -149,20 +149,26 @@
     </div>
 
     <esp-web-install-button manifest="manifest-ST7789.json">
-      <button id="st7789" slot="activate">
-        Install RandumbF1 - ST7789 Driver
-      </button>
+  <button id="st7789" slot="activate">
+    Install RandumbF1 - ST7789 Driver
+  </button>
 
-    <esp-web-install-button manifest="manifest-ILI9341.json">
-      <button id="ili9341" slot="activate">
-        Install RandumbF1 - ILI9341 Driver
-      </button>
+  <span slot="unsupported">
+    This browser does not support Web Serial.
+    Use Chrome or Edge on a desktop computer.
+  </span>
+</esp-web-install-button>
 
-      <span slot="unsupported">
-        This browser does not support Web Serial.
-        Use Chrome or Edge on a desktop computer.
-      </span>
-    </esp-web-install-button>
+<esp-web-install-button manifest="manifest-ILI9341.json">
+  <button id="ili9341" slot="activate">
+    Install RandumbF1 - ILI9341 Driver
+  </button>
+
+  <span slot="unsupported">
+    This browser does not support Web Serial.
+    Use Chrome or Edge on a desktop computer.
+  </span>
+</esp-web-install-button>
 
       <script>
 document.getElementById("st7789").addEventListener("click", function () {
